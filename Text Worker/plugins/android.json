@@ -7,20 +7,11 @@
         "files": {
             "res/xml/config.xml": {
                 "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
-                            "count": 1
-                        }
-                    ]
+                    "/*": []
                 }
             }
         }
     },
-    "installed_plugins": {
-        "com.verso.cordova.clipboard": {
-            "PACKAGE_NAME": "io.cordova.myappd35830"
-        }
-    },
+    "installed_plugins": {},
     "dependent_plugins": {}
 }
