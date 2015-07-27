@@ -357,27 +357,31 @@
     "Scripts\\angular-mocks.js",
     "www\\scripts\\angular.min.js",
     "config.xml",
-    "plugins\\com.verso.cordova.clipboard\\www\\clipboard.js",
-    "plugins\\com.verso.cordova.clipboard\\plugin.xml",
-    "plugins\\com.verso.cordova.clipboard\\README.md",
-    "plugins\\com.verso.cordova.clipboard\\src\\wp8\\Clipboard.cs",
-    "plugins\\com.verso.cordova.clipboard\\src\\android\\Clipboard.java",
-    "plugins\\fetch.json",
-    "plugins\\com.verso.cordova.clipboard\\LICENSE",
-    "plugins\\com.verso.cordova.clipboard\\src\\ios\\CDVClipboard.m",
-    "plugins\\com.verso.cordova.clipboard\\src\\ios\\CDVClipboard.h"
+    "plugins\\fetch.json"
   ],
   "deletedFilesIos": [
     "npm-debug.log",
     "Scripts\\angular.min.js",
     "www\\scripts\\angular.js",
-    "www\\scripts\\angular.min.js.map"
+    "www\\scripts\\angular.min.js.map",
+    "plugins\\com.verso.cordova.clipboard\\www\\clipboard.js",
+    "plugins\\com.verso.cordova.clipboard\\plugin.xml",
+    "plugins\\com.verso.cordova.clipboard\\README.md",
+    "plugins\\com.verso.cordova.clipboard\\src\\wp8\\Clipboard.cs",
+    "plugins\\com.verso.cordova.clipboard\\src\\android\\Clipboard.java",
+    "plugins\\com.verso.cordova.clipboard\\LICENSE",
+    "plugins\\com.verso.cordova.clipboard\\src\\ios\\CDVClipboard.m",
+    "plugins\\com.verso.cordova.clipboard\\src\\ios\\CDVClipboard.h"
   ],
-  "addedPluginsIos": [
-    "com.verso.cordova.clipboard@0.1.0"
+  "addedPluginsIos": [],
+  "deletedPluginsIos": [
+    "com.verso.cordova.clipboard"
   ],
-  "deletedPluginsIos": [],
-  "changedFiles": [],
+  "changedFiles": [
+    "www\\scripts\\text.worker.core.js",
+    "www\\scripts\\text.worker.actions.js",
+    "www\\index.html"
+  ],
   "deletedFiles": [],
   "addedPlugins": [],
   "deletedPlugins": []

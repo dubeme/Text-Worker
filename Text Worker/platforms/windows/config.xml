@@ -24,5 +24,4 @@
     <vs:features />
     <preference name="SplashScreen" value="screen" />
     <preference name="windows-target-version" value="8.1" />
-    <vs:plugin name="com.verso.cordova.clipboard" src="https://github.com/VersoSolutions/CordovaClipboard" version="0.1.0" />
 </widget>
