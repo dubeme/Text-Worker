@@ -3,46 +3,28 @@
 
     var actions = [];
 
-    actions.push(createTextWorkerAction(
-        appStrings.replaceAllOccurrence,
-        replaceAllOccurrences,
-        appStrings.queryString,
-        appStrings.replacementString,
-        true
-    ));
-    actions.push(createTextWorkerAction(
-        appStrings.replaceFirstOccurrence,
-        replaceFirstOccurrence,
-        appStrings.queryString,
-        appStrings.replacementString,
-        false
-    ));
-    actions.push(createTextWorkerAction(
-        appStrings.replaceLastOccurrence,
-        replaceLastOccurrence,
-        appStrings.queryString,
-        appStrings.replacementString,
-        false
-    ));
-    actions.push(createTextWorkerAction(appStrings.toUpper, toUpper, null, null, true));
-    actions.push(createTextWorkerAction(appStrings.toLower, toLower, null, null, true));
+    actions.push(createTextWorkerAction(appStrings.replaceAllOccurrence, replaceAllOccurrences, true, true, true));
+    actions.push(createTextWorkerAction(appStrings.replaceFirstOccurrence, replaceFirstOccurrence, true, true, false));
+    actions.push(createTextWorkerAction(appStrings.replaceLastOccurrence, replaceLastOccurrence, true, true, false));
+    actions.push(createTextWorkerAction(appStrings.toUpper, toUpper, false, false, true));
+    actions.push(createTextWorkerAction(appStrings.toLower, toLower, false, false, true));
 
-    function createTextWorkerAction(label, perform, queryString, replacementString, enabled) {
+    function createTextWorkerAction(label, perform, needsQueryString, needsReplacementString, enabled) {
         /*
          * Create an action object
          *
-         * @param label             The string that will be displayed to the user.
-         * @param perform           A function that takes a string and returns a transformed string.
-         * @param queryString       The string to search for.
-         * @param replacementString The string to replace with.
-         * @param enabled           Is this action enabled
+         * @param label                     The string that will be displayed to the user.
+         * @param perform                   A function that takes a string and returns a transformed string.
+         * @param needsQueryString          Indicates if the action needs a query string.
+         * @param needsReplacementString    Indicates if the action needs a replacement string.
+         * @param enabled                   Indicates if the action is enabled.
          */
 
         return {
             "label": label,
             "perform": perform,
-            "queryString": queryString,
-            "replacementString": replacementString,
+            "needsQueryString": needsQueryString,
+            "needsReplacementString": needsReplacementString,
             "enabled": enabled
         }
     }

@@ -35,10 +35,12 @@
         };
 
         scope.$watchGroup(propertiesToWatch, function (newValues, oldValues) {
-            var newAction = !!newValues && !!newValues[0] && newValues[0].value;
+            var selectedAction = !!newValues && !!newValues[0] && newValues[0].value;
 
-            scope.queryStringInputType = (newAction && !newAction.queryString) ? "hidden" : "text";
-            scope.replacementStringInputType = (newAction && !newAction.replacementString) ? "hidden" : "text";
+            if (selectedAction) {
+                scope.queryStringInputType = selectedAction.needsQueryString ? "text" : "hidden";
+                scope.replacementStringInputType = selectedAction.needsReplacementString ? "text" : "hidden";
+            }
         }, true);
 
         $.each(actions, function (index, action) {
